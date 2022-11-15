@@ -39,9 +39,11 @@ sudo cp $HOME/go/bin/gitopiad /usr/bin/gitopiad
 echo "Check gitopiad version:"
 gitopiad version --long
 rm .gitopia/config/genesis.json
-read -p "Masukan nama Node: " MONIKER
+if [ ! $GITOPIA_MONIKER ]; then
+read -p "Enter node name: " GITOPIA_MONIKER
+echo 'export GITOPIA_MONIKER='\"${GITOPIA_MONIKER}\" >> $HOME/.bash_profile
+fi
 echo "export GITOPIA_WALLET=wallet" >> $HOME/.bash_profile
-echo "export GITOPIA_MONIKER="$MONIKER"" >> $HOME/.bash_profile
 echo "export GITOPIA_CHAIN_ID="gitopia-janus-testnet-2"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 gitopiad init --chain-id "$GITOPIA_CHAIN_ID" "$GITOPIA_MONIKER"
