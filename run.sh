@@ -38,7 +38,7 @@ sudo cp $HOME/go/bin/gitopiad /usr/bin/gitopiad
 
 echo "Check gitopiad version:"
 gitopiad version --long
-
+rm .gitopia/config/genesis.json
 read -p "Masukan nama Node: " MONIKER
 echo "export GITOPIA_WALLET=wallet" >> $HOME/.bash_profile
 echo "export GITOPIA_MONIKER="$MONIKER"" >> $HOME/.bash_profile
