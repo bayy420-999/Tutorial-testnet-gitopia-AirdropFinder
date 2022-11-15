@@ -40,7 +40,7 @@ echo "Check gitopiad version:"
 gitopiad version --long
 
 read -p "Masukan nama Node: " MONIKER
-echo "export GITOPIA_WALLET="wallet"" >> $HOME/.bash_profile
+echo "export GITOPIA_WALLET=wallet" >> $HOME/.bash_profile
 echo "export GITOPIA_MONIKER="$MONIKER"" >> $HOME/.bash_profile
 echo "export GITOPIA_CHAIN_ID="gitopia-janus-testnet-2"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
