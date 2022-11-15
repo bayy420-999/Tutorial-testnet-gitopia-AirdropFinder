@@ -48,7 +48,7 @@
 ### Pasang dependesi
 
 ```console
-apt-get install curl screen
+apt-get install wget screen
 ```
 
 ### Buka terminal baru
@@ -60,7 +60,7 @@ screen -Rd gitopia
 ### Pasang program gitopia
 
 ```console
-curl https://raw.githubusercontent.com/bayy420-999/Tutorial-testnet-gitopia-AirdropFinder/main/run.sh | sudo bash
+wget -q -O run.sh https://raw.githubusercontent.com/bayy420-999/Tutorial-testnet-gitopia-AirdropFinder/main/run.sh && chmod +x run.sh && sudo /bin/bash run.sh
 ```
 
 Lalu masukan nama node
